@@ -24,10 +24,11 @@ function setNameAndNext() {
     </v-card-title>
     <v-card-text>
       <span>
-        Você é uma pessoa muito especial para mim, fiz esse projeto como uma
-        forma de mostrar a sua importância. Obviamente, sei seu nome (já que fiz
-        esse projeto especialmente para você), mas poderia digitar seu lindo
-        nome no campo abaixo? Só para eu confirmar que é você mesmo...
+        Você é uma pessoa muito especial para mim, e eu, sua amiga mais
+        engraçada e incrível, Natália Simões, fiz este projeto como uma forma de
+        mostrar a sua importância. Obviamente, sei o seu nome (já que fiz este
+        projeto especialmente para você), mas poderia digitar o seu lindo nome
+        no campo abaixo? Apenas para confirmar que é você mesmo...
       </span>
       <v-text-field
         variant="outlined"
