@@ -14,10 +14,10 @@ function nextPage() {
     <v-card-text>
       <span>
         Me peguei aqui lembrando daquele dia que eu te contei aquela piada e
-        você riu muito kkkkkkkkkk Enfim, fiz algo especialmente para você, já
-        que sei que você gosta de animais, te fiz um papagaio para você
-        conversar com ele, um xêro e espero que seu aniversário seja do jeito
-        que você esperava que fosse!
+        você riu muito kkkkkkkkkk Enfim, temos muitos momentos especiais e fiz
+        algo especialmente para você: já que sei que você gosta de animais, te
+        fiz um papagaio para você conversar, um xêro e espero que seu
+        aniversário seja do jeito que você esperava que fosse!
       </span>
       <v-row class="text-center mt-5">
         <v-col>

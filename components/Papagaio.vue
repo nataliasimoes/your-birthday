@@ -1,13 +1,4 @@
 <script setup lang="ts">
-const birthdayStore = useBirthdayStore();
-const { user, birthday, birthMonth } = storeToRefs(birthdayStore);
-
-const emit = defineEmits("next");
-
-function nextPage() {
-  emit("next");
-}
-
 const you = ref([]);
 const papagaio = ref<string[]>([]);
 const text = ref("");
@@ -17,7 +8,7 @@ const phrases = [
   "Vovó lá vem a polícia",
   "Uma vez Flamengo, sempre Flamengo, Flamengo sempre eu ei",
   "Alguém tem um esqueiro?",
-  "Você não é um papagaio? Não é um papagaio! Vou ler Freud",
+  "Você não é um papagaio! Não é um papagaio! Vou ler Freud",
 ];
 
 function talk() {
@@ -29,7 +20,7 @@ function talk() {
   const randomNumber = Math.floor(Math.random() * 101);
   const randomPhrase = Math.floor(Math.random() * 5);
 
-  if (randomNumber < 30) {
+  if (randomNumber < 35) {
     aux = phrases[randomPhrase];
   }
 

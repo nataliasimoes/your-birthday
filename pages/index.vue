@@ -3,8 +3,8 @@ const currentPage = ref(0);
 </script>
 
 <template>
-  <v-container fluid>
-    <v-row align="center" justify="center" class="h-screen">
+  <v-container fluid class="fill-height">
+    <v-row align="center" justify="center">
       <v-col cols="12" md="4" class="mx-auto">
         <NamePage v-if="currentPage == 0" @next="currentPage++"></NamePage>
         <BirthdayMessage
