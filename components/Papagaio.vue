@@ -9,7 +9,7 @@ function nextPage() {
 }
 
 const you = ref([]);
-const papagaio = ref([]);
+const papagaio = ref<string[]>([]);
 const text = ref("");
 
 const phrases = [
@@ -29,7 +29,7 @@ function talk() {
   const randomNumber = Math.floor(Math.random() * 101);
   const randomPhrase = Math.floor(Math.random() * 5);
 
-  if (randomNumber < 20) {
+  if (randomNumber < 30) {
     aux = phrases[randomPhrase];
   }
 
@@ -37,11 +37,23 @@ function talk() {
   papagaio.value.push("...");
   setTimeout(() => {
     papagaio.value.pop();
-    papagaio.value.push(aux);
+    addSlowly(aux);
   }, 2000);
 
   text.value = "";
 }
+
+const asyncTimeout = async (t: number) => {
+  await new Promise((resolve) => setTimeout(resolve, t));
+};
+const addSlowly = async (text: String) => {
+  papagaio.value.push("");
+  const index = papagaio.value.length - 1;
+  for (let i = 0; i < text.length; i++) {
+    await asyncTimeout(100);
+    papagaio.value[index] += text[i];
+  }
+};
 
 const mergedArray = computed(() => {
   const maxLength = Math.max(you.value.length, papagaio.value.length);
@@ -91,10 +103,23 @@ const mergedArray = computed(() => {
           </div>
 
           <div v-for="item in mergedArray" :key="item">
-            <v-chip class="mb-2">{{ item }}</v-chip>
+            <v-card class="custom-chip" variant="text" density="compact">
+              <v-card-text>
+                {{ item }}
+              </v-card-text>
+            </v-card>
           </div>
         </v-col>
       </v-row>
     </v-card-text>
   </v-card>
 </template>
+
+<style scoped>
+.custom-chip {
+  display: inline-block;
+  border-radius: 16px;
+  background-color: #e0e0e0;
+  margin: 2px;
+}
+</style>
