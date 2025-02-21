@@ -2,8 +2,14 @@
 const emit = defineEmits("next");
 
 const toggleOpen = () => {
+  playSound();
   emit("next");
 };
+
+function playSound() {
+  const audio = new Audio("/click.mp3");
+  audio.play();
+}
 </script>
 
 <template>
