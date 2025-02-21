@@ -53,10 +53,9 @@ mounted();
     <v-card-text>
       <span class="mb-5" v-if="!hasImage">
         Apesar de ter acertado para quem este site foi feito, não estou 100%
-        convencida que é você mesmo, preciso de uma foto sua para ter certeza
-        que é você mesmo, para isso, estou usando uma I.A muito potente que irá
-        fazer essa verificação, na próxima página clique no botão de foto, por
-        favor
+        convencida que é você mesmo, preciso de uma foto sua para ter certeza e
+        estou usando uma I.A muito potente que irá fazer essa verificação, na
+        próxima página clique no botão de foto, por favor!
       </span>
       <div v-else>
         <span
