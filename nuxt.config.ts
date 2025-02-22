@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@nuxtjs/google-fonts",
     "@hypernym/nuxt-anime",
+    "@vueuse/nuxt",
   ],
   imports: {
     dirs: ["store", "services"],
