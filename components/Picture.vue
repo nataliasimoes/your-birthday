@@ -2,14 +2,9 @@
 const emit = defineEmits("next");
 
 const toggleOpen = () => {
-  playSound();
   emit("next");
 };
 
-function playSound() {
-  const audio = new Audio("/click.mp3");
-  audio.play();
-}
 </script>
 
 <template>
@@ -164,6 +159,7 @@ function playSound() {
   from {
     opacity: 0.2;
   }
+
   to {
     opacity: 1;
   }
@@ -173,6 +169,7 @@ function playSound() {
   from {
     margin-top: 0px;
   }
+
   to {
     margin-top: 2px;
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);

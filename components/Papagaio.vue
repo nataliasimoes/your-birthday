@@ -9,6 +9,8 @@ const phrases = [
   "Uma vez Flamengo, sempre Flamengo, Flamengo sempre eu ei",
   "Alguém tem um esqueiro?",
   "Você não é um papagaio! Não é um papagaio! Vou ler Freud",
+  "Sabrina, Sabrina",
+  "Nori psipspspspsp"
 ];
 
 function talk() {
@@ -18,9 +20,9 @@ function talk() {
 
   let aux = text.value;
   const randomNumber = Math.floor(Math.random() * 101);
-  const randomPhrase = Math.floor(Math.random() * 5);
+  const randomPhrase = Math.floor(Math.random() * 7);
 
-  if (randomNumber < 35) {
+  if (randomNumber < 45) {
     aux = phrases[randomPhrase];
   }
 
@@ -73,15 +75,8 @@ const mergedArray = computed(() => {
 
       <v-row class="text-center" align="center">
         <v-col cols="12" xs="12" md="8" class="mt-5">
-          <v-text-field
-            variant="outlined"
-            justify="center"
-            color="green"
-            density="compact"
-            v-model="text"
-            @keyup.enter="talk()"
-          ></v-text-field
-        ></v-col>
+          <v-text-field variant="outlined" justify="center" color="green" density="compact" v-model="text"
+            @keyup.enter="talk()"></v-text-field></v-col>
         <v-col>
           <v-btn color="green" @click="talk()">falar</v-btn>
         </v-col>

@@ -17,16 +17,13 @@ function nextPage() {
     <v-card-text>
       <span>
         Que bom que é você {{ user.name }}, quando comecei a fazer esse código
-        eu logo pensei "{{ user.name }} vai gostar muito disso". Todo dia
-        {{ birthday }} de {{ birthMonth }} eu espero ansiosamente o momento para
-        falar contigo e te parabenizar pelo seu dia, sou muito grata de ter você
-        em minha vida e agradeço muito a sua existência.
+        eu logo pensei "{{ user.name }} vai gostar muito disso". Todo dia {{ birthday }} de {{ birthMonth }}, fico
+        esperando ansiosamente a hora de falar com você e comemorar o seu dia. É sempre especial ter esse momento e
+        mais ainda: ter você por perto.
       </span>
       <v-row class="text-center mt-5">
         <v-col>
-          <v-btn class="mx-auto" color="green" @click="nextPage()"
-            >próximo</v-btn
-          >
+          <v-btn class="mx-auto" color="green" @click="nextPage()">próximo</v-btn>
         </v-col>
       </v-row>
     </v-card-text>
